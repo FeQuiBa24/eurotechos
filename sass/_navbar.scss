@@ -1,0 +1,15 @@
+.navbar-dark .navbar-nav .nav-link{
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+    &:hover{
+        --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    &::after{
+        content: "";
+        display: block;
+        background-color: #f8f9fa;
+        margin-top: 3px;
+        height: 3px;
+        clip-path: var(--clippy);
+        transition: clip-path .5s;
+    }
+}
